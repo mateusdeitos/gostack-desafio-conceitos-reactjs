@@ -8,32 +8,58 @@ body {
   font-size: 14px;
 }
 
-div {
+div.container {
   width: 100%;
   margin: 20px;
-}
-
-div li {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-div li + li {
+
+div.container li {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+div.container li + li {
   margin-top: 15px;
 }
 
-button {
+
+div.container input {
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px 15px;
+  height: 32px;
+  font-size: 14px;
+  border-color: #7159c1;
+  border-width: 1px;
+  }
+div.container input::placeholder{
+  color: #A0A0B2;
+}
+
+div.container button {
   background: #7159c1;
   color: #fff;
   border: 0;
   padding: 10px 15px;
   cursor: pointer;
-  margin-top: 15px;
+  margin: 15px 15px 15px 0;
   font-weight: bold;
   font-size: 14px;
 }
 
-div li button {
+div.container li button {
   margin: 0 15px;
   background: #ca4949;
+}
+
+div.container li button#like {
+  margin: 0 15px;
+  background: #04633b;
 }
